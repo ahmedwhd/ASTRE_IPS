@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.range{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+
+.inputRange{
+  width: 12em;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+
+.inputRange1{
+  width: 17em;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+
+figure{
+  width: 1500px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.graphes{
+  width: 1500px;
+}
