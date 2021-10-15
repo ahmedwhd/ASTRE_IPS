@@ -1,8 +1,8 @@
-<h1>installer les dependances :<h1/>
+<h2>Installer les dependances :<h2/>
 npm install 
 
-//lancer l'application :
+ <h2>Lancer l'application :<h2/>
 npm start 
 
-//lancer le serveur : 
+<h2>/Lancer le serveur : <h2/>
 node src/server/server.js
