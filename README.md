@@ -1,8 +1,8 @@
-//installer les dependances
+//installer les dependances :
 npm install 
 
-//lancer l'application
+//lancer l'application :
 npm start 
 
-//lancer le serveur
+//lancer le serveur : 
 node src/server.js
