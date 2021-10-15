@@ -5,4 +5,4 @@ npm install
 npm start 
 
 //lancer le serveur : 
-node src/server.js
+node src/server/server.js

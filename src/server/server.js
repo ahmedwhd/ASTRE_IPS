@@ -3,7 +3,7 @@ const cors = require('cors')
 
 const app = express()
 app.use(cors())
-const etudiants = require('./server/nvDonnees.json')
+const etudiants = require('./nvDonnees.json')
 
 
 app.get('/etudiants', (req,res) => {
