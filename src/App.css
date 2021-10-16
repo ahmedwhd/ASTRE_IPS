@@ -61,12 +61,13 @@
 }
 
 figure{
-  width: 1500px;
+  width: 1300px;
   display: flex;
   align-items: center;
   justify-content:center;
+  margin-top: -3em;
 }
 
-.graphes{
+/*.graphes{
   width: 1500px;
-}
+}*/

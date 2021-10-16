@@ -240,6 +240,7 @@ function App() {
     {
       title: "score",
     },
+   
     series:
       [{
         name: 'ASTRE ' + listeNumAstre.length,
@@ -255,57 +256,9 @@ function App() {
         data: dataNeutre,
         color: "#4dffc3"
       }],
+     
+     
   };
-
-  ItemSeries(Highcharts);
-
-  const options1 = {
-    chart: {
-      type: 'item'
-    },
-    title: {
-      text: 'Prediction choix des options'
-    },
-    subtitle: {
-      text: ''
-    },
-    legend: {
-      labelFormat: '{name} <span style="opacity: 0.4">{y}</span>'
-    },
-    series: [{
-      name: 'Representatives',
-      keys: ['name', 'y', 'color', 'label'],
-      data: [['ASTRE', listeNumAstre.length, '#990000', 'Nombre d\'ASTRE'],
-      ['IPS', listeNumIPS.length, '#95CEFF', 'Nombre d\'IPS'],
-      ['Neutre', listeNumNeutre.length, '#4dffc3', 'Nombre de neutre']],
-      dataLabels: {
-        enabled: true,
-        format: '{point.label}'
-      },
-
-      // Circular options
-      center: ['50%', '88%'],
-      size: '170%',
-      startAngle: -100,
-      endAngle: 100
-    }],
-
-    responsive: {
-      rules: [{
-        condition: {
-          maxWidth: 600
-        },
-        chartOptions: {
-          series: [{
-            dataLabels: {
-              distance: -30
-            }
-          }]
-        }
-      }]
-    }
-  };
-
 
   const options2 = {
     chart: {
@@ -313,7 +266,7 @@ function App() {
       plotBorderWidth: 0,
       plotShadow: false,
       height: 300,
-      width: 300,
+      width: 700,
     },
     title: {
       text: 'Prediction <br>choix des <br> options',
@@ -345,19 +298,24 @@ function App() {
         size: '110%'
       }
     },
+    
     series: [{
       type: 'pie',
       name: 'Browser share',
       innerSize: '50%',
       data: [
-
         ['ASTRE', listeNumAstre.length],
         ['Neutre', listeNumNeutre.length],
-        ['IPS', listeNumIPS.length, "red"],
-
+        ['IPS', listeNumIPS.length],
       ],
-      colors: ["#990000", "#4dffc3", "#95CEFF"]
-    }]
+      colors: ["#990000", "#4dffc3", "#95CEFF"],
+      legend: ["ASTRE", "Neutre", "IPS"]
+    }],
+    
+    dataLabels: {
+      enabled: true,
+      format: '{point.name}'
+    },
   };
 
 
@@ -481,7 +439,6 @@ function App() {
         </div>
       </div>
       <figure className="graphes">
-        <HighchartsReact highcharts={Highcharts} options={options1} />
         <HighchartsReact highcharts={Highcharts} options={options2} />
       </figure>
 
