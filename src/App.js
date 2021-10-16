@@ -214,7 +214,7 @@ function App() {
 
       })
   },
-    [kNetflix, kTechno, kLinux, kEquipe, kCreatif, kArtistique, kMontage, kEnsimElec_MontagePC_Linux, kLinux_Actualite_Devant_, kNetflix_PlusieursEcrans_Artistique, kCreatif_Artistique_Soirees_Equipe,kPlacement,kEcrans, kEnsimElec, kEcrans,kColocation,kColocation_PartirDeZero,kDiriger_MontagePC])
+    [kNetflix, kTechno, kLinux, kEquipe, kCreatif, kArtistique, kMontage, kEnsimElec_MontagePC_Linux, kLinux_Actualite_Devant_, kNetflix_PlusieursEcrans_Artistique, kCreatif_Artistique_Soirees_Equipe,kPlacement,kEcrans, kEnsimElec, kEcrans,kColocation,kColocation_PartirDeZero,kDiriger_MontagePC,kDiriger, kPartirDuneBase])
 
   const options = {
     chart: {
@@ -397,6 +397,18 @@ function App() {
           <label style={{ width: "5em" }}>Soirees</label>
           <input type="range" min="-5" max="5" value={kSoirees} onChange={(e) => { setkSoirees(e.target.value) }} />
           <label style={{ width: "5em", marginLeft: "3em" }}>{kSoirees}</label>
+        </div>
+
+        <div className="inputRange" >
+          <label style={{ width: "5em" }}>Solution de zero</label>
+          <input type="range" min="-5" max="5" value={kPartirDuneBase} onChange={(e) => { setkPartirDuneBase(e.target.value) }} />
+          <label style={{ width: "5em", marginLeft: "3em" }}>{kPartirDuneBase}</label>
+        </div>
+
+        <div className="inputRange" >
+          <label style={{ width: "5em" }}>Diriger</label>
+          <input type="range" min="-5" max="5" value={kDiriger} onChange={(e) => { setkDiriger(e.target.value) }} />
+          <label style={{ width: "5em", marginLeft: "3em" }}>{kDiriger}</label>
         </div>
 
       </div>
