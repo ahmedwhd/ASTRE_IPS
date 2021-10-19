@@ -237,9 +237,15 @@ function App() {
       }
       ],
     yAxis:
-    {
+    [{
       title: "score",
     },
+    {
+      opposite: true,
+      title: "score",
+      reversed: false,
+      linkedTo: 0,
+    }],
    
     series:
       [{
