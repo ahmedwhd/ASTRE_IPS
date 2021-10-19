@@ -175,21 +175,21 @@ function App() {
              (kNetflix_PlusieursEcrans_Artistique * Netflix_PlusieursEcrans_Artistique) + (kEnsimElec_MontagePC_Linux * EnsimElec_MontagePC_Linux) + (kLinux_Actualite_Devant_ * Linux_Actualite_Devant) + (kCreatif_Artistique_Soirees_Equipe * Creatif_Artistique_Soirees_Equipe)+ (kColocation_PartirDeZero * Colocation_PartirDeZero) + (kDiriger_MontagePC*Diriger_MontagePC))/10;  
 
           //Insertion des etudiants dans l'une des trois categories
-          if ((score[key]) < -0.25) {
+          if ((score[key]) < 0) {
 
             donneesAtre[key] = [data[key].numEtu, score[key]];
             listEtudiantAstre.push(data[key].numEtu);
             donneesIps[key] = [data[key].numEtu, null];
             donneesNeutre[key] = [data[key].numEtu, null];
 
-          } if ((score[key]) <= 0.25  && (score[key]) >= -0.25) {
+          } if ((score[key]) ==0) {
 
             donneesNeutre[key] = [data[key].numEtu, score[key]];
             listEtudiantNeutre.push(data[key].numEtu);
             donneesAtre[key] = [data[key].numEtu, null];
             donneesIps[key] = [data[key].numEtu, null];
 
-          } if ((score[key]) > 0.25) {
+          } if ((score[key]) > 0) {
 
             donneesIps[key] = [data[key].numEtu, score[key]];
             listEtudiantIps.push(data[key].numEtu);
@@ -269,7 +269,7 @@ function App() {
       width: 700,
     },
     title: {
-      text: 'Prediction <br>choix des <br> options',
+      text: 'Prédiction <br>choix des <br> options',
       align: 'center',
       verticalAlign: 'middle',
       y: 60
@@ -349,13 +349,13 @@ function App() {
           <label style={{ width: "5em", marginLeft: "3em" }}>{kEnsimElec}</label>
         </div>
         <div className="inputRange" >
-          <label style={{ width: "5em" }}>Ecrans</label>
+          <label style={{ width: "8em" }}>2 écrans ou plus</label>
           <input type="range" min="-5" max="5" value={kEcrans} onChange={(e) => { setkEcrans(e.target.value) }} />
           <label style={{ width: "5em", marginLeft: "3em" }}>{kEcrans}</label>
         </div>
 
         <div className="inputRange" >
-          <label style={{ width: "5em" }}>Montage</label>
+          <label style={{ width: "8em" }}>Montage PC</label>
           <input type="range" min="-5" max="5" value={kMontage} onChange={(e) => { setkMontage(e.target.value) }} />
           <label style={{ width: "5em", marginLeft: "3em" }}>{kMontage}</label>
         </div>
@@ -369,7 +369,7 @@ function App() {
 
 
         <div className="inputRange" >
-          <label style={{ width: "5em" }}>Creatif</label>
+          <label style={{ width: "5em" }}>Créatif</label>
           <input type="range" min="-5" max="5" value={kCreatif} onChange={(e) => { setkCreatif(e.target.value) }} />
           <label style={{ width: "5em", marginLeft: "3em" }}>{kCreatif}</label>
         </div>
@@ -382,31 +382,31 @@ function App() {
         </div>
 
         <div className="inputRange" >
-          <label style={{ width: "5em" }}>Colocation</label>
+          <label style={{ width: "12em" }}>Aimer la colocation</label>
           <input type="range" min="-5" max="5" value={kColocation} onChange={(e) => { setkColocation(e.target.value) }} />
           <label style={{ width: "5em", marginLeft: "3em" }}>{kColocation}</label>
         </div>
 
         <div className="inputRange" >
-          <label style={{ width: "5em" }}>Placement</label>
+          <label style={{ width: "12em" }}>Aimer se placer devant</label>
           <input type="range" min="-5" max="5" value={kPlacement} onChange={(e) => { setkPlacement(e.target.value) }} />
           <label style={{ width: "5em", marginLeft: "3em" }}>{kPlacement}</label>
         </div>
 
         <div className="inputRange" >
-          <label style={{ width: "5em" }}>Soirees</label>
+          <label style={{ width: "5em" }}>Soirées</label>
           <input type="range" min="-5" max="5" value={kSoirees} onChange={(e) => { setkSoirees(e.target.value) }} />
           <label style={{ width: "5em", marginLeft: "3em" }}>{kSoirees}</label>
         </div>
 
         <div className="inputRange" >
-          <label style={{ width: "5em" }}>Solution de zero</label>
+          <label style={{ width: "10em" }}>Créer une solution en partant de zero</label>
           <input type="range" min="-5" max="5" value={kPartirDuneBase} onChange={(e) => { setkPartirDuneBase(e.target.value) }} />
           <label style={{ width: "5em", marginLeft: "3em" }}>{kPartirDuneBase}</label>
         </div>
 
         <div className="inputRange" >
-          <label style={{ width: "5em" }}>Diriger</label>
+          <label style={{ width: "8em" }}>Aimer diriger</label>
           <input type="range" min="-5" max="5" value={kDiriger} onChange={(e) => { setkDiriger(e.target.value) }} />
           <label style={{ width: "5em", marginLeft: "3em" }}>{kDiriger}</label>
         </div>
